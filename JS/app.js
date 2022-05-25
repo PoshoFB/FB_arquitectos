@@ -34,10 +34,10 @@ form.addEventListener("submit", (e) => {
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
+  var x = document.getElementById("nav-links");
+  if (x.className === "nav-links") {
     x.className += " responsive";
   } else {
-    x.className = "topnav";
+    x.className = "nav-links";
   }
 }

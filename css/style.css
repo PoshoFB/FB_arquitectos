@@ -20,7 +20,7 @@ p {
 }
 h2 {
   color: #fff;
-  font-size: 1.5em;
+  font-size: 30px;
 }
 
 header {
@@ -29,41 +29,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 9999;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 80px;
-  /* gap: 30em; */
-  padding: 0px 50px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.nav-links a:hover {
-  color: #0085dd;
-}
-
-#banner {
-  background-image: url("../img/Banner_Arquitectura-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  padding-bottom: 50px;
-  height: 700px;
-  width: auto;
-  /* margin-bottom: 10%; */
-  box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.4);
 }
 
 .container {
@@ -77,12 +42,48 @@ nav {
   align-items: center;
 }
 
+/* --------SECCION NAV------- */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  /* gap: 20px; */
+  /* padding: 0px 50px; */
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-links a:hover {
+  color: #0085dd;
+}
+.nav-links .icon {
+  display: none;
+}
+
+/* --------SECCION BANNER------- */
+#banner {
+  background-image: url("../img/Banner_Arquitectura-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 50px;
+  height: 700px;
+  width: auto;
+  /* margin-bottom: 10%; */
+  box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.4);
+}
 .card-banner {
   margin: 0 auto;
   /* text-align: center; */
   /* padding: 0px 160px; */
 }
-
 .card-banner p {
   color: #fff;
   font-size: 35px;
@@ -92,15 +93,7 @@ nav {
   margin-bottom: 200px;
 } */
 
-.card-somos {
-  display: flex;
-  grid-template-columns: auto auto;
-  /* text-align:right; */
-  /* align-content:flex-start; */
-  /* text-align: justify; */
-  /* background-color: rgba(255, 255, 255, 0.1); */
-  padding: 0px;
-}
+/* --------SECCION SOMOS------- */
 
 #somos {
   text-align: justify;
@@ -110,7 +103,15 @@ nav {
 #somos h2 {
   margin: 1em 0px;
 }
-
+.card-somos {
+  display: flex;
+  grid-template-columns: auto auto;
+  /* text-align:right; */
+  /* align-content:flex-start; */
+  /* text-align: justify; */
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  padding: 0px;
+}
 .text-somos p {
   /* margin: 20px 0px; */
   padding: 20px 40px;
@@ -118,6 +119,12 @@ nav {
   width: 100%;
   text-align: justify;
 }
+.somos-img{
+  width: 50%;
+  height: auto;
+}
+
+/* --------SECCION PROYECTO------- */
 
 #proyecto {
   text-align: justify;
@@ -201,7 +208,7 @@ nav {
   margin: 3px 0px;
 }
 
-/* contacto */
+/* --------SECCION CONTACTO------- */
 
 #contacto {
   /* margin: 3em 0px; */
@@ -278,6 +285,8 @@ button {
   text-align: auto;
 }
 
+/* --------SECCION FOOTER------- */
+
 footer {
   /* align-items: center; */
   background-color: rgba(183, 183, 183, 0.336);
@@ -299,6 +308,9 @@ footer p {
 #footer a:hover {
   color: #302727;
 }
+
+/* --------AREA RESPONSIVE/MEDIA------- */
+
 @media screen and (max-width: 1920px) {
 }
 
@@ -306,37 +318,69 @@ footer p {
 }
 
 @media screen and (max-width: 800px) {
-  h2 {
-    font-size: 2vw;
-  }
+  /* h2 p {
+    font-size: -1em;
+  } */
   /* .login-texto {
     display: none;
   } */
   /* .logo-texto {
     display: none;
   } */
-  #banner {
+  /* #logo {
+    height: 60%;
+  } */
+  /* #banner {
     height: 400px;
-  }
+  } */
 
   .container {
     max-width: 720px;
   }
-  .card-banner {
-    padding: 0px 75px;
+  #banner {
+    height: 400px;
+    width: auto;
+    /* margin-bottom: 10%; */
+    box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.4);
+  }
+  .card-banner p {
+    color: #fff;
+    font-size: 20px;
+    /* text-align: center; */
+  }
+  /* #somos h2 {
+    margin: 1em 5px;
+  } */
+  .card-somos {
+    display: block;
+    /* width: 100%; */
+    padding: 0px 70px;
+    /* margin: auto; */
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .text-somos p {
+    /* margin: 20px 0px; */
+    padding: 20px 40px;
+    font-size: 15px;
+    width: 110%;
+  }
+  .somos-img{
+    width: 100%;
+    height: auto;
+    
   }
   .proyecto-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    display: block;
   }
   .d-form {
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px;
   }
 
   .d-iframe {
-    width: 100%;
+    width: 50%;
   }
+}
 
   #footer {
     flex-direction: column;
@@ -346,20 +390,14 @@ footer p {
 }
 
 @media screen and (max-width: 480px) {
-  h2 {
+  h2 p {
     font-size: 1vw;
   }
-  .login-texto {
-    display: none;
-  }
-  .logo-texto {
-    display: none;
+  #logo {
+    height: 30%;
   }
   #banner {
     height: 300px;
-  }
-  #busqueda {
-    height: 200px;
   }
   .container {
     max-width: 420px;
@@ -383,88 +421,12 @@ footer p {
 
 /* CSS NAVBAR */
 
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
+@media screen and (max-width: 600px) {
+  .nav-links a:not(:first-child) {
+    display: none;
+  }
+  .nav-links a.icon {
+    float: right;
+    display: block;
+  }
 }
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #04aa6d;
-  color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-
-/* CSS form */
-
-/* form{
-  background: #fff;
-  padding: 20px 0;
-  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-} */
-
-/* input:focus{ 
-  outline: none;
-  color: #5e5d5d;
-} */
-
-/* label{
-  color: var(--colorTextos);
-  font-size: 16px;
-  position: absolute;
-  left: 5px;
-  top: 10px;
-  transition: 0.5s ease all;
-  pointer-events: none;
-} */
-
-/* input:focus~label,
-input:valid~label{
-  top: -14px;
-  font-size: 12px;
-  color: #2196f3;
-} */
-
-/* .barra{
-  position: relative;
-  display: block;
-  width: 100%;
-} */
-
-/* .barra::before{
-  content: "";
-  height: 2px;
-  width: 0%;
-  bottom: 0;
-  position: absolute;
-  background: linear-gradient(to right, #B06AB3, #4568DC);
-  transition: 0.3s ease width;
-  left: 0;
-} */
-
-/* input:focus~.barra::before{
-  width: 100%;
-} */
